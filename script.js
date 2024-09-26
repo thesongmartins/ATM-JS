@@ -16,8 +16,10 @@ function verifyPin() {
     pinMessage.style.color = "green";
 
     // Hide the PIN section and show the ATM section
-    document.getElementById("pin-section").style.display = "none";
-    document.getElementById("atm").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("pin-section").style.display = "none";
+      document.getElementById("atm").style.display = "block";
+    }, 2000);
   } else {
     pinMessage.innerText = "Incorrect PIN. Please try again.";
     pinMessage.style.color = "red";
